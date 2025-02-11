@@ -65,3 +65,27 @@
 ![Image](https://github.com/user-attachments/assets/1b173946-8613-4e8a-97f0-ff2b17b8d591)
 
 ## Click in "Apply" and "Ok".
+
+# Coding: 
+
+## After all these steps, now is coding hour... To use the lib, it is necessary to pass a vector as arguments to the function "executableBuble": 
+
+```cpp
+#include "MyLibBuble.h"
+#include <iostream>
+#include <vector>
+
+int main() {
+    std::vector<int> nums = { 1, 5, 8, 9, 10 };
+
+    executableBuble(nums);
+
+    std::cout << "This is list after order: ";
+
+    for (int num : nums) {
+        std::cout << num << " ";
+    }
+
+    return 0;
+}
+```
