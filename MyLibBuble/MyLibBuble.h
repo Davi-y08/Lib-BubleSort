@@ -1,4 +1,7 @@
 #include <vector>
-void executableBuble(std::vector<int>& array);
+using namespace std;
+
+void executableBuble(vector<int>& array);
+int linearSearch(int list[], int element);
 
 

@@ -1,6 +1,6 @@
 #include "mylibbuble.h"
 #include <algorithm>
-using namespace std;
+#include <iostream>
 
 void executableBuble(std::vector<int>& array)
 {
@@ -16,4 +16,32 @@ void executableBuble(std::vector<int>& array)
 			}
 		}
 	}
+}
+
+int linearSearch(int list[], int element)
+{
+	int sizeList = sizeof(list) / sizeof(list[0]);
+	int left = 0;
+	int right = sizeList - 1;
+
+	while (left <= right) {
+		int meio = (left + right) / 2;
+
+		if (list[meio] == element)
+		{
+			std::cout << element;
+			return element;
+		}
+
+		if (list[meio] < element)
+		{
+			left = 1 + meio;
+		}
+
+		else {
+			right = meio;
+		}
+	}
+
+	return -1;
 }
