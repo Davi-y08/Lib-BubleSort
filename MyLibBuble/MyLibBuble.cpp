@@ -18,7 +18,7 @@ void executableBuble(std::vector<int>& array)
 	}
 }
 
-int linearSearch(int list[], int element)
+int binarySearch(int list[], int element)
 {
 	int sizeList = sizeof(list) / sizeof(list[0]);
 	int left = 0;

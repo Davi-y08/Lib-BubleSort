@@ -2,6 +2,6 @@
 using namespace std;
 
 void executableBuble(vector<int>& array);
-int linearSearch(int list[], int element);
+int binarySearch(int list[], int element);
 
 
