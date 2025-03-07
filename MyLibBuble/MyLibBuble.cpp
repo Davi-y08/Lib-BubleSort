@@ -2,7 +2,7 @@
 #include <algorithm>
 #include <iostream>
 
-void executableBuble(std::vector<int>& array)
+vector<int> executableBuble(std::vector<int>& array)
 {
 	int n = array.size();
 
@@ -16,6 +16,8 @@ void executableBuble(std::vector<int>& array)
 			}
 		}
 	}
+
+	return array;
 }
 
 int binarySearch(int list[], int element)
@@ -44,4 +46,32 @@ int binarySearch(int list[], int element)
 	}
 
 	return -1;
+}
+
+template<typename T>
+int search_low_number(const vector<T>& arr) {
+	T menor = arr[0]; 
+	int menorIndice = 0;
+
+	for (int i = 0; i < arr.size(); i++)
+	{
+		if(arr[i] < menor) 
+		{
+			menor = arr[i];
+			menorIndice = i;
+		}
+	}
+
+	return menorIndice;
+}
+
+template<typename T>
+vector<T> qSort(vector<T> arr) {
+	vector<T> sorted;
+
+	while (!arr.empty()) {
+		int menor_indice = search_low_number(arr);
+		sorted.push_back(arr[menor_indice]);
+		arr.erase(arr.begin() + menor_indice);
+	}
 }
